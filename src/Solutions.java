@@ -21,7 +21,14 @@ public class Solutions
 	
 /*----------------------------------------------------------------------------*/	
 	
-	public static int numJewelsInStones(String J, String S) {
+/*
+* 理解错了题意，原题意思是J里每一个元素都是一种宝石，
+*此做法是把J整个作为了一块宝石
+*
+*然而，it's a way to compare String arrays
+* (calculate how many times string A appears in string B)
+*/
+	public static int numJewelsInStones_StringComparison(String J, String S) {
 		char[] JJ=J.toCharArray();
 		char[] SS=S.toCharArray();
 		int jewels=0;
@@ -49,4 +56,15 @@ public class Solutions
 			return 0;
 		}
 	}
+
+/*-----------------------------------------------------------------------------*/
+
+	public static int numJewelsInStones(String J, String S) {
+		return 0;
+	}
+
+
+
+
+/*-----------------------------------------------------------------------------*/
 }
