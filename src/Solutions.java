@@ -1,5 +1,5 @@
 import java.util.*;
-//@Author pjx206
+
 public class Solutions
 {
 	public static boolean JudgeRouteCircle(String moves){
@@ -21,9 +21,32 @@ public class Solutions
 	
 /*----------------------------------------------------------------------------*/	
 	
-	public int numJewelsInStones(String J, String S) {
-		int nums=0;
-		
-		return nums;
+	public static int numJewelsInStones(String J, String S) {
+		char[] JJ=J.toCharArray();
+		char[] SS=S.toCharArray();
+		int jewels=0;
+		if (JJ.length<=SS.length)
+		{
+			for(int i=0;i<=SS.length-JJ.length;i++)
+			{
+				if(SS[i]==JJ[0])
+				{
+					boolean isJ=true;
+					for(int j=1;j<JJ.length;j++)
+					{
+						if(SS[i+j]!=JJ[j])
+						{
+							isJ=false;
+							break;
+						}
+					}
+					if(isJ)
+						jewels++;
+				}
+			}
+			return jewels;
+		}else{
+			return 0;
+		}
 	}
 }

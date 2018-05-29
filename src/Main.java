@@ -6,7 +6,9 @@ public class Main extends Solutions
 	{
 //		String test="UUDD";
 //		System.out.println(JudgeRouteCircle(test));
-		
+		String J="Aa";
+		String S="sAaudhAa";
+		System.out.println(numJewelsInStones(J,S));
 	}
 	
 }
