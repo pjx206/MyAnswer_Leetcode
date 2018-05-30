@@ -59,6 +59,7 @@ public class Solutions
 
 /*-----------------------------------------------------------------------------*/
 
+//宝石和石头问题正解
 	public static int numJewelsInStones(String J, String S) {
 		char[] JJ=J.toCharArray();
 		char[] SS=S.toCharArray();
@@ -81,6 +82,7 @@ public class Solutions
 
 
 
-
 /*-----------------------------------------------------------------------------*/
+
+
 }
