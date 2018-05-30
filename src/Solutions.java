@@ -60,7 +60,23 @@ public class Solutions
 /*-----------------------------------------------------------------------------*/
 
 	public static int numJewelsInStones(String J, String S) {
-		return 0;
+		char[] JJ=J.toCharArray();
+		char[] SS=S.toCharArray();
+		int jewels=0;
+		if(JJ.length<=SS.length)
+		{
+			for(char j:JJ)
+			{
+				for(int i=0;i<SS.length;i++)
+				{
+					if(SS[i]==j)
+					{
+						jewels++;
+					}
+				}
+			}
+		}
+		return jewels;
 	}
 
 
