@@ -85,7 +85,6 @@ public class Solutions
 	public static void rotate(int[] nums, int k) {
 		if(k>=nums.length)
 			k=k-nums.length;
-		
 		for(int i=0;i<k;i++)//notice that if k=0, the lines below will not be executed
 		{
 			for(int j=1;j<nums.length;j++)
