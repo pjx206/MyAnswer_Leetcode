@@ -64,16 +64,13 @@ public class Solutions
 		char[] JJ=J.toCharArray();
 		char[] SS=S.toCharArray();
 		int jewels=0;
-		if(JJ.length<=SS.length)
+		for(char j:JJ)
 		{
-			for(char j:JJ)
+			for(int i=0;i<SS.length;i++)
 			{
-				for(int i=0;i<SS.length;i++)
+				if(SS[i]==j)
 				{
-					if(SS[i]==j)
-					{
-						jewels++;
-					}
+					jewels++;
 				}
 			}
 		}
