@@ -8,9 +8,9 @@ public class Main extends Solutions
 //		String test="UUDD";
 //		System.out.println(JudgeRouteCircle(test));
 		
-//		int[] test={1,2,3,4,5,6};
-//		rotate(test,0);
-//		System.out.println(Arrays.toString(test));
+		int[] test={1,2,4,3,5,3};
+		int a=removeElement(test,3);
+		System.out.println(Arrays.toString(test)+"val="+a);
 		
 	}
 }

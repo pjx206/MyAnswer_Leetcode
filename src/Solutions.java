@@ -96,4 +96,39 @@ public class Solutions
 		}
 	}
 
+/*-----------------------------------------------------------------------------*/
+// https://leetcode-cn.com/problems/remove-element/description/
+	public static int removeElement(int[] nums,int val){
+		int n=0;
+		for(int i=0;i<nums.length;i++)
+		{
+			if(nums[i]==val)
+				n++;
+		}
+		
+		int j=0;
+		for(int i=0;i<nums.length;i++)
+		{
+			if(nums[i]!=val)
+			{
+				nums[j]=nums[i];
+				j++;
+			}
+		}
+		
+		return nums.length-n;
+	}
+
+	public static int removeDuplicates(int[] nums) {
+		int pointer=0;
+		for(int i=1;i<nums.length;i++)
+		{
+			if(nums[i]!=nums[pointer])
+			{
+				pointer++;
+				nums[pointer]=nums[i];
+			}
+		}
+		return pointer+1;
+	}
 }
