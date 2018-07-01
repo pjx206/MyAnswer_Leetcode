@@ -82,6 +82,7 @@ public class Solutions
 
 
 /*-----------------------------------------------------------------------------*/
+<<<<<<< HEAD
 	public static void rotate(int[] nums, int k) {
 		if(k>=nums.length)
 			k=k-nums.length;
@@ -150,3 +151,8 @@ public class Solutions
 	}
 }
 /*-----------------------------------------------------------------*/
+=======
+
+
+}
+>>>>>>> branch 'master' of https://github.com/pjx206/MyAnswer_Leetcode.git
