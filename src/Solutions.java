@@ -82,6 +82,77 @@ public class Solutions
 
 
 /*-----------------------------------------------------------------------------*/
+<<<<<<< HEAD
+	public static void rotate(int[] nums, int k) {
+		if(k>=nums.length)
+			k=k-nums.length;
+		for(int i=0;i<k;i++)//notice that if k=0, the lines below will not be executed
+		{
+			for(int j=1;j<nums.length;j++)
+			{
+				int temp=nums[nums.length-j];
+				nums[nums.length-j]=nums[nums.length-j-1];
+				nums[nums.length-j-1]=temp;
+			}
+		}
+	}
+
+	public static void betterRotate(int[] nums, int k) {
+        k%=nums.length;
+        reverseElements(nums,0,nums.length-1);
+        reverseElements(nums,0,k-1);
+        reverseElements(nums,k,nums.length-1);
+    }
+    public static void reverseElements(int[] nums, int from, int to) {
+        while(from<to)
+        {
+            int temp=nums[to];
+            nums[to]=nums[from];
+            nums[from]=temp;
+            from++;
+            to--;
+        }
+    }
+/*-----------------------------------------------------------------------------*/
+// https://leetcode-cn.com/problems/remove-element/description/
+	public static int removeElement(int[] nums,int val){
+		int n=0;
+		for(int i=0;i<nums.length;i++)
+		{
+			if(nums[i]==val)
+				n++;
+		}
+		
+		int j=0;
+		for(int i=0;i<nums.length;i++)
+		{
+			if(nums[i]!=val)
+			{
+				nums[j]=nums[i];
+				j++;
+			}
+		}
+		
+		return nums.length-n;
+	}
+
+/*------------------------------------------------------------------*/
+	public static int removeDuplicates(int[] nums) {
+		int pointer=0;
+		for(int i=1;i<nums.length;i++)
+		{
+			if(nums[i]!=nums[pointer])
+			{
+				pointer++;
+				nums[pointer]=nums[i];
+			}
+		}
+		return pointer+1;
+	}
+}
+/*-----------------------------------------------------------------*/
+=======
 
 
 }
+>>>>>>> branch 'master' of https://github.com/pjx206/MyAnswer_Leetcode.git
