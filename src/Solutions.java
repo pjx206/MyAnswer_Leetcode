@@ -96,6 +96,22 @@ public class Solutions
 		}
 	}
 
+	public static void betterRotate(int[] nums, int k) {
+        k%=nums.length;
+        reverseElements(nums,0,nums.length-1);
+        reverseElements(nums,0,k-1);
+        reverseElements(nums,k,nums.length-1);
+    }
+    public static void reverseElements(int[] nums, int from, int to) {
+        while(from<to)
+        {
+            int temp=nums[to];
+            nums[to]=nums[from];
+            nums[from]=temp;
+            from++;
+            to--;
+        }
+    }
 /*-----------------------------------------------------------------------------*/
 // https://leetcode-cn.com/problems/remove-element/description/
 	public static int removeElement(int[] nums,int val){
@@ -119,6 +135,7 @@ public class Solutions
 		return nums.length-n;
 	}
 
+/*------------------------------------------------------------------*/
 	public static int removeDuplicates(int[] nums) {
 		int pointer=0;
 		for(int i=1;i<nums.length;i++)
@@ -132,3 +149,4 @@ public class Solutions
 		return pointer+1;
 	}
 }
+/*-----------------------------------------------------------------*/
