@@ -1,29 +1,21 @@
 import java.util.*;
-<<<<<<< HEAD
-//import java.util.Arrays;
 
 public class Main extends Solutions
 {
-	public static void main(String[] args)
-	{
-//		String test="UUDD";
-//		System.out.println(JudgeRouteCircle(test));
-		
-		int[] test={1,2,4,3,5,3};
-		int a=removeElement(test,3);
-		System.out.println(Arrays.toString(test)+"val="+a);
-=======
+	public static void main(String[] args) {
+        char[][] board_1= {
+                {'5','3','.','.','7','.','.','.','.'},
+                {'6','.','.','1','9','5','.','.','.'},
+                {'.','9','8','.','.','.','.','6','.'},
+                {'8','.','.','.','6','.','.','.','3'},
+                {'4','.','.','8','.','3','.','.','1'},
+                {'7','.','.','.','2','.','.','.','6'},
+                {'.','6','.','.','.','.','2','8','.'},
+                {'.','.','.','4','1','9','.','.','5'},
+                {'.','.','.','.','8','.','.','7','9'}
+        };  //declared a big Sudoku
 
-public class Main extends Solutions
-{
-	public static void main(String[] args)
-	{
-//		String test="UUDD";
-//		System.out.println(JudgeRouteCircle(test));
-		String J="Aa";
-		String S="AavvaudhA";
-		System.out.println(numJewelsInStones(J,S));
->>>>>>> branch 'master' of https://github.com/pjx206/MyAnswer_Leetcode.git
-		
+        System.out.println(isValidSudoku(board_1));
+
 	}
 }

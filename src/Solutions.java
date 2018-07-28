@@ -82,7 +82,7 @@ public class Solutions
 
 
 /*-----------------------------------------------------------------------------*/
-<<<<<<< HEAD
+
 	public static void rotate(int[] nums, int k) {
 		if(k>=nums.length)
 			k=k-nums.length;
@@ -149,10 +149,51 @@ public class Solutions
 		}
 		return pointer+1;
 	}
-}
 /*-----------------------------------------------------------------*/
-=======
+	public static boolean isValidSudoku(char[][] board) {
+		//Horizontal validity
+		for (int i = 0; i < 8; i++)
+		{
+			for (int j = 0; j<8;j++)
+			{
+				char checking=board[i][j];
+				for(int k=1;k<8;k++){
+                    if (checking == board[i][j]) {
+                        return false;
+                    }
+                }
+			}
+		}
+
+		//Vertically validity
+        for (int i = 0; i < 9; i++)
+        {
+            for (int j = 0; j < 9; j++)
+            {
+                char checking = board[i][j];
+                for(int k=1; k<9; k++){
+                    if (checking == board[j][i]) {
+                        return false;
+                    }
+                }
+            }
+        }
 
 
+		return true;
+	}
+    //Validity in matrix of 9*9
+    /*I think there is a way to Optimize*/
+
+    private boolean checkMatrix(int start_x,int start_y,int end_x,int end_y,char[][] board){
+        for (int i = start_x;i<end_x;i++)
+        {
+            for(int j=start_y;j<end_y;j++)
+            {
+                char checking=board[i][j];
+
+            }
+        }
+        return true;
+    }
 }
->>>>>>> branch 'master' of https://github.com/pjx206/MyAnswer_Leetcode.git
