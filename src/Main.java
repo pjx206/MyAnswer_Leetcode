@@ -13,7 +13,7 @@ public class Main extends Solutions
                 {'.','6','.','.','.','.','2','8','.'},
                 {'.','.','.','4','1','9','.','.','5'},
                 {'.','.','.','.','8','.','.','7','9'}
-        };  //declared a big Sudoku
+        };  //declared a Sudoku
 
         System.out.println(isValidSudoku(board_1));
 
