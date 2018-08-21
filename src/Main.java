@@ -15,7 +15,10 @@ public class Main extends Solutions
                 {'.','.','.','.','8','.','.','7','9'}
         };  //declared a big Sudoku
 
-        System.out.println(isValidSudoku(board_1));
 
+//        System.out.println(isValidSudoku(board_1));
+        int[] nums = {0,1,0,3,12};
+        moveZeroes(nums);
+        System.out.println(Arrays.toString(nums));
 	}
 }
