@@ -218,16 +218,29 @@ public class Solutions {
             return digits;
         }
     }
-
-    private boolean checkMatrix(int start_x, int start_y, int end_x, int end_y, char[][] board) {
-        for (int i = start_x; i < end_x; i++) {
-            for (int j = start_y; j < end_y; j++) {
-                char checking = board[i][j];
-
+    /*----------------------------------------------------------------------------------------------*/
+    public boolean isPalindrome(int x) {
+        if(x<0){
+            return false;
+        }else{
+            int temp = x;
+            int[] digits = new int[sizeOfInt(x)];
+            for (int i = digits.length-1;i >=0 ; i--) {
+                digits[i]=temp%10;
+                temp/=10;
             }
         }
-        return true;
     }
-
+    public static void sizeOfInt(int a){
+        final int[] sizeTable = {9,99,999,9999,99999,999999,9999999,
+                99999999,999999999,Integer.MAX_VALUE}
+        for (int i = 0;;i++){
+            if(x<=sizeTable[i])
+            {
+                return i+1;
+            }
+        }
+    }
+}
 
 }//keep this "}"
