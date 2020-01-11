@@ -11,35 +11,45 @@ class MyStack:
         """
         Initialize your data structure here.
         """
-        self._stack = []
-        
+        self._allocatedSize = 24
+        self._stack = [0] * self._allocatedSize
+        self._sp = 0
 
     def push(self, x: int) -> None:
         """
         Push element x onto stack.
         """
-        self._stack.append(x)
+        self._sp += 1
+        if self._sp < self._allocatedSize:
+            self._stack[self._sp] = x
+        else:
+            self._stack += [0] * self._allocatedSize
+            self._stack[self._sp] = x
+            self._allocatedSize <<= 1
+        
         
 
     def pop(self) -> int:
         """
         Removes the element on top of the stack and returns that element.
         """
-        return self._stack.pop()
+        _topEle = self._stack[self._sp]
+        self._sp -= 1
+        return _topEle
         
 
     def top(self) -> int:
         """
         Get the top element.
         """
-        return self._stack[-1]
+        return self._stack[self._sp]
         
 
     def empty(self) -> bool:
         """
         Returns whether the stack is empty.
         """
-        return True if len(self._stack) == 0 else False
+        return True if self._sp == 0 else False
         
 
 
