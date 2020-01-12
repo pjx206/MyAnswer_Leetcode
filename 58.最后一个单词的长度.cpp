@@ -5,25 +5,27 @@
  */
 
 // @lc code=start
-class Solution {
+class Solution
+{
 public:
-    int lengthOfLastWord(string s) {
-        reverse_iterator it = s.end();
+    int lengthOfLastWord(string s)
+    {
+        string::reverse_iterator it;
         bool start = false;
         int len = 0;
-        while(it++ != s.begin()){
-            start = *it != ' ' ? true : false;
-            if(start){
-                if(*it != ' '){
-                    len ++;
-                }else{
+        for (it = s.rbegin(); it != s.rend(); it++)
+        {
+            if (!start && isalpha(*it))
+                start = true;
+            if (start)
+            {
+                if (isalpha(*it))
+                    len++;
+                else
                     break;
-                }
             }
         }
         return len;
-
     }
 };
 // @lc code=end
-
